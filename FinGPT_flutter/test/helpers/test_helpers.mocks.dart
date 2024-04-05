@@ -6,6 +6,7 @@
 import 'dart:async' as _i5;
 import 'dart:ui' as _i6;
 
+import 'package:fintaxai/services/prediction_service.dart' as _i7;
 import 'package:flutter/material.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i3;
@@ -669,4 +670,20 @@ class MockDialogService extends _i1.Mock implements _i2.DialogService {
         ),
         returnValueForMissingStub: null,
       );
+}
+
+/// A class which mocks [PredictionService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockPredictionService extends _i1.Mock implements _i7.PredictionService {
+  @override
+  _i5.Future<void> getPrediction(Map<String, dynamic>? inputData) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getPrediction,
+          [inputData],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 }

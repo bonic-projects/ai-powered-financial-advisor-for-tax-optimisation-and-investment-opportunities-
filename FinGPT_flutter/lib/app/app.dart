@@ -7,6 +7,7 @@ import 'package:stacked_services/stacked_services.dart';
 import 'package:fintaxai/ui/views/tax/tax_view.dart';
 import 'package:fintaxai/ui/views/chat/chat_view.dart';
 import 'package:fintaxai/ui/views/invest/invest_view.dart';
+import 'package:fintaxai/services/prediction_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -22,7 +23,8 @@ import 'package:fintaxai/ui/views/invest/invest_view.dart';
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
-    // @stacked-service
+    LazySingleton(classType: PredictionService),
+// @stacked-service
   ],
   bottomsheets: [
     StackedBottomsheet(classType: NoticeSheet),
@@ -32,5 +34,6 @@ import 'package:fintaxai/ui/views/invest/invest_view.dart';
     StackedDialog(classType: InfoAlertDialog),
     // @stacked-dialog
   ],
+  logger: StackedLogger()
 )
 class App {}

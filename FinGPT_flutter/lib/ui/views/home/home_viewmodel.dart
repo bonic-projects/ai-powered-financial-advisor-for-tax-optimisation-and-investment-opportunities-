@@ -11,9 +11,11 @@ class HomeViewModel extends BaseViewModel {
   void taxnavigation() {
     _navigationService.navigateTo(Routes.taxView);
   }
+
   void investnavigation() {
     _navigationService.navigateTo(Routes.investView);
   }
+
   void chatnavigation() {
     _navigationService.navigateTo(Routes.chatView);
   }

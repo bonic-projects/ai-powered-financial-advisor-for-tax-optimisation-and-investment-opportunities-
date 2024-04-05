@@ -12,7 +12,7 @@ class InvestView extends StackedView<InvestViewModel> {
     InvestViewModel viewModel,
     Widget? child,
   ) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(),
       body: const Center(
         child: Text("Invest"),

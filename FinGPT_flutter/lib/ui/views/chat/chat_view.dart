@@ -12,12 +12,10 @@ class ChatView extends StackedView<ChatViewModel> {
     ChatViewModel viewModel,
     Widget? child,
   ) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(),
       body: const Center(
-        child: Text(
-          "Chat"
-        ),
+        child: Text("Chat"),
       ),
     );
   }
