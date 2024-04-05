@@ -5,9 +5,9 @@ import 'package:http/http.dart' as http;
 class PredictionService {
   final log = getLogger('PredictionService');
 
-  Future<void> getPrediction(Map<String, dynamic> inputData) async {
+  Future<double?> getPrediction(Map<String, dynamic> inputData) async {
     // Replace 'YOUR_SERVER_URL' with the URL of your Flask server
-    String url = 'YOUR_SERVER_URL/predict';
+    const String url = 'http://192.168.29.174:5000/predict';
 
     try {
       // Make POST request to server
@@ -26,12 +26,12 @@ class PredictionService {
       } else {
         // Handle errors
         log.e('Failed to get prediction: ${response.reasonPhrase}');
-        return;
+        return null;
       }
     } catch (e) {
       // Handle exceptions
       log.e('Exception occured: $e');
-      return;
+      return null;
     }
   }
 
