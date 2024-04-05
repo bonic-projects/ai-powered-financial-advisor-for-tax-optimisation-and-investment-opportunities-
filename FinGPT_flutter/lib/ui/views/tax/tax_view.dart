@@ -15,9 +15,7 @@ class TaxView extends StackedView<TaxViewModel> {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: Text(
-          "Tax page"
-        ),
+        child: Text("Tax page"),
       ),
     );
   }

@@ -34,11 +34,11 @@ class HomeView extends StackedView<HomeViewModel> {
                         file: 'assets/lottie/tax.json'),
                     Option(
                         name: 'Invest',
-                        onTap: () {},
+                        onTap: viewModel.investnavigation,
                         file: 'assets/lottie/invest.json'),
                     Option(
                         name: 'Chat',
-                        onTap: () {},
+                        onTap: viewModel.chatnavigation,
                         file: 'assets/lottie/chat.json'),
                   ],
                 ),

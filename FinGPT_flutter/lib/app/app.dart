@@ -5,6 +5,8 @@ import 'package:fintaxai/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:fintaxai/ui/views/tax/tax_view.dart';
+import 'package:fintaxai/ui/views/chat/chat_view.dart';
+import 'package:fintaxai/ui/views/invest/invest_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -12,6 +14,8 @@ import 'package:fintaxai/ui/views/tax/tax_view.dart';
     MaterialRoute(page: HomeView),
     MaterialRoute(page: StartupView),
     MaterialRoute(page: TaxView),
+    MaterialRoute(page: ChatView),
+    MaterialRoute(page: InvestView),
 // @stacked-route
   ],
   dependencies: [

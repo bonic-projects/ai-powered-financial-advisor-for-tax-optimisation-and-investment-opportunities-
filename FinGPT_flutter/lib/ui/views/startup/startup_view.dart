@@ -21,7 +21,10 @@ class StartupView extends StackedView<StartupViewModel> {
           children: [
             Text(
               'FinGPT',
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900,color: Color.fromARGB(255, 147, 197, 106)),
+              style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                  color: Color.fromARGB(255, 147, 197, 106)),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
