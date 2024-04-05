@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Tax Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name=" Total Salary" placeholder=" Total Salary" required="required" />
+        <input type="text" name="Income from other sources" placeholder="Income from other sources" required="required" />
+	<input type="text" name="Contribution to NPS U/S 80CCD(2)" placeholder="Contribution to NPS U/S 80CCD(2)" required="required" />
+        <input type="text" name="Exemption of leave encashment US10 (10AA) " placeholder="Exemption of leave encashment US10 (10AA) " required="required" />
+        <input type="text" name="Transport allowance for specially-abled persons" placeholder="Transport allowance for specially-abled persons" required="required" />
+	<input type="text" name="Interest on home loan taken for let-out property U/S 24(b)" placeholder="Interest on home loan taken for let-out property U/S 24(b)" required="required" />
+        <input type="text" name="Other Deductions under new regime" placeholder="Other Deductions under new regime" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
