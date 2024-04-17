@@ -3,6 +3,7 @@ import 'package:mockito/mockito.dart';
 import 'package:fintaxai/app/app.locator.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:fintaxai/services/prediction_service.dart';
+import 'package:fintaxai/services/gpt_service.dart';
 // @stacked-import
 
 import 'test_helpers.mocks.dart';
@@ -12,6 +13,7 @@ import 'test_helpers.mocks.dart';
   MockSpec<BottomSheetService>(onMissingStub: OnMissingStub.returnDefault),
   MockSpec<DialogService>(onMissingStub: OnMissingStub.returnDefault),
   MockSpec<PredictionService>(onMissingStub: OnMissingStub.returnDefault),
+MockSpec<GptService>(onMissingStub: OnMissingStub.returnDefault),
 // @stacked-mock-spec
 ])
 void registerServices() {
@@ -19,6 +21,7 @@ void registerServices() {
   getAndRegisterBottomSheetService();
   getAndRegisterDialogService();
   getAndRegisterPredictionService();
+getAndRegisterGptService();
 // @stacked-mock-register
 }
 
@@ -77,6 +80,12 @@ MockPredictionService getAndRegisterPredictionService() {
   final service = MockPredictionService();
   locator.registerSingleton<PredictionService>(service);
   return service;
+}
+MockGptService getAndRegisterGptService() { 
+_removeRegistrationIfExists<GptService>(); 
+final service = MockGptService(); 
+locator.registerSingleton<GptService>(service); 
+return service; 
 }
 // @stacked-mock-create
 

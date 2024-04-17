@@ -1,7 +1,7 @@
+import 'package:fintaxai/ui/common/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:stacked/stacked.dart';
-import 'package:fintaxai/ui/common/app_colors.dart';
 
 import 'home_viewmodel.dart';
 
@@ -25,21 +25,23 @@ class HomeView extends StackedView<HomeViewModel> {
             children: [
               Expanded(
                 flex: 4,
-                child: GridView.count(
-                  crossAxisCount: 2,
+                child: ListView(
                   children: [
                     Option(
-                        name: 'Tax',
-                        onTap: viewModel.taxnavigation,
-                        file: 'assets/lottie/tax.json'),
+                      name: 'Tax',
+                      onTap: viewModel.taxnavigation,
+                      file: 'assets/lottie/tax.json',
+                    ),
                     Option(
-                        name: 'Invest',
-                        onTap: viewModel.investnavigation,
-                        file: 'assets/lottie/invest.json'),
+                      name: 'Invest',
+                      onTap: viewModel.investnavigation,
+                      file: 'assets/lottie/invest.json',
+                    ),
                     Option(
-                        name: 'Chat',
-                        onTap: viewModel.chatnavigation,
-                        file: 'assets/lottie/chat.json'),
+                      name: 'Chat',
+                      onTap: viewModel.chatnavigation,
+                      file: 'assets/lottie/chat.json',
+                    ),
                   ],
                 ),
               ),

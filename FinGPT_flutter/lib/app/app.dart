@@ -8,6 +8,7 @@ import 'package:fintaxai/ui/views/tax/tax_view.dart';
 import 'package:fintaxai/ui/views/chat/chat_view.dart';
 import 'package:fintaxai/ui/views/invest/invest_view.dart';
 import 'package:fintaxai/services/prediction_service.dart';
+import 'package:fintaxai/services/gpt_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -24,6 +25,7 @@ import 'package:fintaxai/services/prediction_service.dart';
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: PredictionService),
+    LazySingleton(classType: GptService),
 // @stacked-service
   ],
   bottomsheets: [
